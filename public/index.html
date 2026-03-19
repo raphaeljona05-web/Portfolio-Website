@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raphael Jonathon George - Web Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="logo">Raphael J. George</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger" id="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container hero-content">
+            <h2 class="animate-up">Hello, I'm</h2>
+            <h1 class="animate-up delay-1">Raphael Jonathon George</h1>
+            <p class="animate-up delay-2">A passionate Web Developer focused on crafting clean & user-friendly experiences.</p>
+            <a href="#contact" class="btn animate-up delay-3">Get In Touch</a>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">↓</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I am a dedicated professional with a keen interest in web development and data structures. I enjoy solving complex problems and learning new technologies to build efficient and scalable web applications.</p>
+                    <h3>Education</h3>
+                    <p>My academic path has provided me with a strong foundation in computer science principles and robust problem-solving skills, enabling me to tackle technical challenges effectively.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">🐍</div>
+                    <h3>Python</h3>
+                    <p>Advanced data manipulation, scripting, and backend development.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">📊</div>
+                    <h3>R Language</h3>
+                    <p>Data analysis, statistical modeling, and logical visualizations.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>MySQL</h3>
+                    <p>Relational database management, querying, and schema design.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🌐</div>
+                    <h3>HTML/CSS/JS</h3>
+                    <p>Building responsive, accessible, and dynamic frontend interfaces.</p>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon">🟢</div>
+                    <h3>Node.js</h3>
+                    <p>Server-side logic and RESTful API development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-info">
+                        <h3>Portfolio Website</h3>
+                        <p>A full-stack portfolio built with Node.js, Express, MySQL, HTML5, CSS3, and JavaScript.</p>
+                        <a href="https://github.com/raphaeljona05-web/Porfolio-Website" target="_blank" class="btn-small">View Source</a>
+                    </div>
+                </div>
+                <!-- Additional projects can be added here -->
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Feel free to reach out for collaborations or just a friendly hello!</p>
+                    <ul class="contact-list">
+                        <li><strong>Email:</strong> <a href="mailto:raphael.jona05@gmail.com">raphael.jona05@gmail.com</a></li>
+                        <li><strong>GitHub:</strong> <a href="https://github.com/raphaeljona05-web" target="_blank">raphaeljona05-web</a></li>
+                        <li><strong>LinkedIn:</strong> Let's connect and grow together!</li>
+                    </ul>
+                </div>
+                <form id="contactForm" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required placeholder="john@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Your message here..."></textarea>
+                    </div>
+                    <button type="submit" class="btn" id="submitBtn">Send Message</button>
+                    <div id="formMessage" class="form-message"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Raphael Jonathon George. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

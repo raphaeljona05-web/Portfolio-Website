@@ -1,0 +1,17 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "Professional Portfolio Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "author": "Raphael Jonathon George",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "mysql2": "^3.11.3"
+  }
+}
