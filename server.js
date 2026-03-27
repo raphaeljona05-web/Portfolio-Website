@@ -1,7 +1,9 @@
+require('dotenv').config();
 const express = require('express');
 const mysql = require('mysql2');
 const path = require('path');
 const cors = require('cors');
+const nodemailer = require('nodemailer');
 
 const app = express();
 const port = 3000;
@@ -50,6 +52,15 @@ db.connect((err) => {
   });
 });
 
+// Set up Nodemailer transporter using Gmail
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS
+  }
+});
+
 // API endpoint for contact form submission
 app.post('/api/contact', (req, res) => {
   const { name, email, message } = req.body;
@@ -66,6 +77,24 @@ app.post('/api/contact', (req, res) => {
       return res.status(500).json({ success: false, message: 'Database error.' });
     }
     
+    // Prepare email message
+    const mailOptions = {
+        from: process.env.EMAIL_USER,
+        to: process.env.EMAIL_USER,
+        subject: `New Portfolio Contact from ${name}`,
+        text: `You have received a new contact message from your portfolio.\n\nName: ${name}\nEmail: ${email}\nMessage:\n${message}`,
+        replyTo: email
+    };
+
+    // Send email silently in the background
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.error('Error sending email:', error);
+        } else {
+            console.log('Email sent successfully: ' + info.response);
+        }
+    });
+
     res.status(200).json({ success: true, message: 'Message sent successfully!' });
   });
 });
